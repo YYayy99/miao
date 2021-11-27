@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            position: relative;
+        }
+        div:hover span{
+            font-size: 200%;
+        }
+        span{
+            transition: 0.5s;
+            position: absolute;
+            bottom: 0;
+        }
+        div::after{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            text-indent: 0;
+            content: attr(data-title);
+        }
+    </style>
+</head>
+<body>
+    <div><span>订阅博客</span></div>
+    <div data-title="订阅博客"></div>
+</body>
+</html>
