@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: inset 0 0 1px red;
+}
+html {
+  zoom: 2;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+div {
+  height: 100%;
+  display: flex;
+  xflex-flow: column wrap;
+}
+section {
+  width: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column
+}
+aside {
+  width: 60px;
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  height: 70px;
+  overflow: auto;
+}
+main {
+  flex-grow: 1;
+  height: 0;
+  overflow: auto;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ipsam tenetur illo facere veniam, modi ratione similique. Aliquam, aliquid dolorem et voluptatum reiciendis fuga earum tempora velit blanditiis odio exercitationem.</aside>
+        <section>
+            <header>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium eos esse deleniti, impedit velit laborum! Aspernatur placeat ratione iste eum. Eligendi tempora sapiente similique molestias error alias accusantium laborum vel?</header>
+            <main>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem id aliquam, excepturi porro ex necessitatibus animi nisi minus, veritatis, fugiat ratione optio deserunt aspernatur exercitationem neque ea dolorem? Dolores, est!</main>
+        </section>
+        <aside>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum veritatis sapiente ut doloribus magni velit vitae ea quae, laboriosam obcaecati? Unde fugit sint eligendi reprehenderit consequatur quia, a recusandae harum.</aside>
+        <aside>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus tempora quasi architecto accusantium aperiam consequatur eveniet id cupiditate ut eaque officiis nostrum voluptatibus vel assumenda ad voluptates, magni perspiciatis excepturi!</aside>
+    </div>
+</body>
+</html>
