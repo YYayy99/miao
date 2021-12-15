@@ -15,8 +15,8 @@
     var a = Number(prompt('请输入第一个数字'))
     var b = Number(prompt('请输入第二个数字'))
     var c = Number(prompt('请输入第三个数字'))
-    var d =(a + b)
-    console.log(d / c)
+    var d =(a + b) /c
+    console.log(d)
   </script>
   <script type="xxx" id="ch0103/04">
     var a = Number(prompt('请输入第一个数字'))
@@ -35,15 +35,16 @@
   <script type="xxx" id="ch0103/06">
     var a = Number(prompt('请输入第一个数字'))
     var b = Number(prompt('请输入第二个数字'))
-    console.log(Math.round(b / a*10000)/100) +"%"
+    var c = b / a * 100
+    console.log(c.toFixed(3) + '%')
   </script>
   <script type="xxx" id="ch0103/07">
     var a = Number(prompt('请输入第一个数字'))
     var b = Number(prompt('请输入第二个数字'))
     var c = Number(prompt('请输入第三个数字'))
     var d = Number(prompt('请输入第四个数字'))
-    var x = Number(prompt('请输入第五个数字'))
-    console.log(a * x * x *x + b * x * x + c * x + d)
+    var x = a * x * x *x + b * x * x + c * x + d
+    console.log(x.toFixed(7))
   </script>
   <script type="xxx" id="ch0103/08">
     var a = Number(prompt('请输入温度'))
@@ -52,9 +53,10 @@
   </script>
   <script type="xxx" id="ch0103/09">
     var a = Number(prompt('请输入半径'))
-    var b =(a*2)
-    var c =(3.14*a*2)
-    var d =((3.14*a)*(3.14*a))
+    var b =(a * 2)
+    var x =3.14159
+    var c =(x * a *2 )
+    var d =((x * a * a))
     console.log(b.toFixed(4))
     console.log(c.toFixed(4))
     console.log(d.toFixed(4))
@@ -68,23 +70,30 @@
   <script type="xxx" id="ch0103/11">
     var a = Number(prompt('请输入第一个数'))
     var b = Number(prompt('请输入第二个数'))
-    var r =(a/b)
-    console.log(r)
+    var r =(a%b)
+    console.log(r.toFixed(4))
   </script>
   <script type="xxx" id="ch0103/12">
     var a = Number(prompt('请输入半径'))
-    var b =(4 / 3 * 3.14 * a * a * a)
+    var c =3.14
+    var b =(4 / 3 * c * a * a * a)
     console.log(b.toFixed(2))
   </script>
   <script type="xxx" id="ch0103/13">
     var a = Number(prompt('请输入'))
-    console.log(a.reverse())
+    var b = n % 10
+    var c = (n - b) / 10 % 10
+    var d = (n - b - c * 10) / 10 % 10
+    var e = string (b) + sting (c) + string (d)
+    console.log(e)
   </script>
   <script type="xxx" id="ch0103/14">
     var a = Number(prompt('请输入桶深'))
     var b = Number(prompt('请输入底面面积'))
-    var c =(3.14159 * b * b * a)
-    console.log(c)
+    var d =3.14159
+    var c =d * b * b * a / 1000
+    var e =Math.ceil(20/c)
+    console.log(e)
   </script>
   <script type="xxx" id="ch0103/15">
     var a = Number(prompt('请输入第一个数字'))
@@ -94,22 +103,35 @@
     console.log(parseInt(d))
   </script>
   <script type="xxx" id="ch0103/16">
-    var a = Number(prompt('请输入坐标'))
-    var b = Number(prompt('请输入坐标'))
-    var c =()
-    console.log(c)
+    var a1 = Number(prompt('请输入坐标'))
+    var b1 = Number(prompt('请输入坐标'))
+    var a2 = Number(prompt('请输入坐标'))
+    var b2 = Number(prompt('请输入坐标'))
+    var cx = a1 - a2
+    var cy = y1 - y2
+    var c = Math.sqrt(cx * cx + cy *cy)
+    console.log(c.toFixed(3))
   </script>
   <script type="xxx" id="ch0103/17">
-    var a = Number(prompt('请输入坐标'))
-    var b = Number(prompt('请输入坐标'))
-    var c = Number(prompt('请输入坐标'))
-    var d =()
+    var a1 = Number(prompt('请输入坐标'))
+    var b1 = Number(prompt('请输入坐标'))
+    var a2 = Number(prompt('请输入坐标'))
+    var b2 = Number(prompt('请输入坐标'))
+    var a3 = Number(prompt('请输入坐标'))
+    var b3 = Number(prompt('请输入坐标'))
+    var c = Math.sqrt(Math.pow((a1 - a2),2) + Math.pow((b1 - b2),2))
+    var d = Math.sqrt(Math.pow((a1 - a3),2) + Math.pow((b1 - b3),2))
+    var e = Math.sqrt(Math.pow((a3 - a2),2) + Math.pow((b3 - b2),2))
+    var f =(c + d + e) / 2
+    var g =Math.sqrt(  f * (f - c) * (f - d) * (f - e)  )
+    console.log(g.toFixed(2))
   </script>
   <script type="xxx" id="ch0103/18">
     var a = Number(prompt('请输入第一个数'))
     var b = Number(prompt('请输入第二个数'))
     var c = Number(prompt('请输入第三个数'))
-    var d =(a + (c-1) * b)
+    var e = b - a
+    var d =a + (c - 1) * e
   </script>
   <script type="xxx" id="ch0103/19">
     var a = Number(prompt('请输入第一个数字'))
@@ -118,9 +140,8 @@
   </script>
   <script  id="ch0103/20">
     var a = Number(prompt('请输入一个数'))
-    var b = 2
-    math.pow(a,2)
-    onsole.log(b)
+    var c = Math.pow(a,2)
+    onsole.log(c)
   </script>
   <script type="xxx" id="ch0104/01">
     var a = Number(prompt('请输入一个数'))
@@ -130,6 +151,22 @@
     if (a>0) onsole.log(b)
     if (a=0) onsole.log(c)
     if (a<0) onsole.log(d)
+  </script>
+  <script type="xxx" id="ch0104/02">
+    var a = Number(prompt('请输入一个数'))
+    var b =(Math.a)
+    onsole.log(b)
+  </script>
+  <script type="xxx" id="ch0104/03">
+    var a = Number(prompt('请输入一个数'))
+    var b = odd
+    var c = even
+    if (a%2==0) onsole.log(c)
+    if (a%2!=0) onsole.log(b)
+  </script>
+  <script id="ch0104/04">
+
+
   </script>
 
 
