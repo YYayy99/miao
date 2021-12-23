@@ -962,3 +962,126 @@ var d = (a-(c/b))
   }
   console.log(sum)
 </script>
+<script type="xxx" id="narcissistic">
+  function digitwidth (n) {
+    var digitwidth = 0
+    var m = n
+    while (n > 0) {
+      var 个位 = n % 10
+      digitwidth++
+      n = (n - 个位) / 10
+    }
+    m = n
+    while (m > 0){
+      var 个位 = n % 10
+      sum += Math.pow(个位,digitwidth)
+      m = (m - 个位) / 10
+    }
+    if (sum == n) {
+      return true
+    } else {
+      return false
+    }
+  }
+</script>
+<script type="xxx" id="narcissistics">
+  function digitwidth (m) {
+    var width = 0
+   do {
+     width++
+     var 个位 = m % 10
+     m = (m - 个位) / 10
+    } width (m > 0)
+
+    return width
+  }
+  function power(x,n) {
+    var result = 1
+    for (var i = 0; i < n; i++) {
+      result *= x
+    }
+    return result
+  }
+  function isNarcissistic(n) {
+    var w = digitwidth(n)
+    var m = n
+    var sum = 0
+    while (m > 0) {
+      var 个位 = m % 10
+      sum += power(个位,w)
+      m = (m - 个位) / 10
+    }
+    return sum == n
+  }
+   for (var i = 1; i <= 10000; i++) {
+     if (isNarcissistic(i)){
+      console.log(i)
+     }
+   }
+</script>
+<script type="xxx" id="palindrom">
+  function isPalindrom(n) {
+    var reverse = 0
+    var m = n
+    while (m > 0) {
+      var digit = m % 10
+      m = (m - digit) / 10
+      reverse = reverse * 10 + digit
+    }
+     return reverse == n
+  }
+</script>
+<script type="xxx" id="complete-number">
+  function isCompletenumber(n) {
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+      if (n % i ==0) {
+        sum += i
+      }
+    }
+    return sum == n
+  }
+</script>
+<script type="xxx" id="complete-numbers">
+  function isCompletenumber(n) {
+    var sum = 0
+    for (var i = 1; i < 1000; i++) {
+      if (n % i ==0) {
+        sum += i
+      }
+    }
+    return sum == n
+  }
+</script>
+<script type="xxx" id="itoa">
+  function itoa(n) {
+     var result = ''
+
+     while (n > 0) {
+       var d = n % 10
+
+       if (d == 0) {
+         result += '0' + result
+       }
+       if (d == 1) {
+        result += '1' + result
+      }
+      if (d == 2) {
+        result += '2' + result
+      }
+      n = (n - d) /10
+     }
+     return result
+  }
+</script>
+<script type="xxx" id="sqrt">
+function.sqrt(n) {
+  for (var i = 0; i < n; i += 0.00001) {
+    if (Math.abs(i * I - n) < 0.001) {
+      return i
+    }
+  }
+}
+</script>
+
+
