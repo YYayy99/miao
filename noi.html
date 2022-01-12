@@ -1075,13 +1075,72 @@ var d = (a-(c/b))
   }
 </script>
 <script type="xxx" id="sqrt">
-function.sqrt(n) {
-  for (var i = 0; i < n; i += 0.00001) {
-    if (Math.abs(i * I - n) < 0.001) {
-      return i
+function sqrt(n) {
+  var left = 0
+  var right = n
+  do {
+    var mid = (left + right) / 2
+    if (mid * mid < n) {
+      left = mid
+    } else if (mid * mid > n) {
+      right = mid
+    } else  {
+      return mid
     }
-  }
+    var mid = (left + right) /2
+  } while (Math.abs(mid * mid - n) > 0.0000001)
+  return mid
 }
 </script>
+<script type="xxx" id="weekday">
+  function yfen(n) {
+    if (n % 400 == 0) {
+      return true
+    }
+    if (n % 100 == 0) {
+      return false
+    }
+    if (n % 4 == 0) {
+      return true
+    }
+    return false
+  }
+  function getMonthDay(year, month) {
+    swich (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        return 31
+      case 2:
+        if(isLeapYear(year)) {
+          return 29
+        } else {
+          return 28
+        }
+        default:
+        return 30
+    }
+  }
+  function weekday(year, month) {
+    var day = 0
+    for (var y = 1; y < year; y++) {
+      if (yfen(y)) {
+        day += 366
+      } else {
+        day += 365
+      }
+    }
+    for (var m = 1; m < month; m++) {
+      day += getMonthDay(year,m)
+    }
+    day = (day + 1) % 7
+    return day
+  }
+</script>
+
 
 
